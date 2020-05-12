@@ -27,7 +27,7 @@ const OwnerAnimals = () => {
     }).then(() => {
       setOwnerAnimals(ownerAnimals.filter((animal) => animal.id !== id));
     }).catch((error) => {
-      alert(`Erro ao excluir animal. ${error.response.data.message}`);
+      alert(`Erro ao excluir animal. ${error?.response?.data?.message}`);
     });
   };
 

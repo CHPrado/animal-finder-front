@@ -32,7 +32,7 @@ const Register = () => {
         localStorage.setItem('ownerName', response.data.name);
         history.push('/');
       }).catch((error) => {
-        alert(`Erro no cadastro, tente novamente. ${error.response.data.message}`);
+        alert(`Erro no cadastro, tente novamente. ${error?.response?.data?.message}`);
       });
   };
 

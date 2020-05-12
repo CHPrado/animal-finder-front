@@ -63,7 +63,7 @@ const Animal = (props) => {
 
       history.push('/owner/animals');
     }).catch((error) => {
-      alert(`Falha ao salvar informações. ${error.response.data.message}`);
+      alert(`Falha ao salvar informações. ${error?.response?.data?.message}`);
     });
   };
 

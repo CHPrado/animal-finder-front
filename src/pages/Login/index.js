@@ -26,7 +26,7 @@ const Login = () => {
         history.push('/');
       })
       .catch((error) => {
-        alert(`Falha ao realizar login. ${error.response.data.message}`);
+        alert(`Falha ao realizar login. ${error?.response?.data?.message}`);
       });
   };
 
