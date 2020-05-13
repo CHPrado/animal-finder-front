@@ -6,7 +6,7 @@ import { Edit, Delete, Pets } from '@material-ui/icons';
 import petPortrait from '../../assets/pet-portrait.png';
 import Header from '../../components/Header';
 import api from '../../services/api';
-import getAnimalStatus from '../../utils/getAnimalStatus';
+import getAnimalStatus from '../../utils';
 
 import './styles.css';
 import Loader from '../../components/Loader';
@@ -44,14 +44,24 @@ const OwnerAnimals = () => {
     });
   };
 
-  useEffect(() => {
-    api.get('owner-animals', {
+  const getOwnerAnimals = async () => {
+    await api.get('owner-animals', {
       headers: {
         Authorization: ownerId,
       },
     }).then((response) => {
       setOwnerAnimals(response.data);
+    }).catch(() => {
+      setAlertMessage('Falha ao conectar com o servidor.');
+      setAlertType('error');
+      setAlertState(true);
+    }).finally(() => {
+      setIsloading(false);
     });
+  }
+
+  useEffect(() => {
+    getOwnerAnimals();
   }, []);
 
   const handleCloseAlert = () => {

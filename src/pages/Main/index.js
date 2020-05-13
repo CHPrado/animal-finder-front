@@ -9,7 +9,7 @@ import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import Pagination from '../../components/Pagination';
 import api from '../../services/api';
-import getAnimalStatus from '../../utils/getAnimalStatus';
+import getAnimalStatus from '../../utils';
 
 const Main = () => {
   const [animals, setAnimals] = useState([]);
