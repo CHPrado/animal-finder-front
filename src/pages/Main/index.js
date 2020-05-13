@@ -45,7 +45,7 @@ const Main = () => {
 
   useEffect(() => {
     loadAnimals();
-  }, []);
+  }, [page]);
 
   return (
     <>
