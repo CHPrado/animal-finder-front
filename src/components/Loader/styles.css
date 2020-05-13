@@ -18,6 +18,7 @@
 }
 
 .loading h1, .loading .loader {
+  color: #006eff;
   font-size: 50px;
   z-index: 100;
 }
@@ -31,8 +32,8 @@
 
 .loader {
   border: 16px solid #f3f3f3;
-  border-top: 16px solid #2d88ff;
-  border-bottom: 16px solid #2d88ff;
+  border-top: 16px solid #006eff;
+  border-bottom: 16px solid #006eff;
   border-radius: 50%;
   width: 120px;
   height: 120px;

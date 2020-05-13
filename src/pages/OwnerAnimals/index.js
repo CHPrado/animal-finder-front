@@ -45,6 +45,8 @@ const OwnerAnimals = () => {
   };
 
   const getOwnerAnimals = async () => {
+    setIsloading(true);
+
     await api.get('owner-animals', {
       headers: {
         Authorization: ownerId,
